@@ -104,9 +104,9 @@ const Menu = () => {
         <div className="dishes-container">
         <div className='dishes'>
           {
-            menu.map((dataItem,index)=>{
+            menu.map((dataItem)=>{
               return(
-                <div key={index} className='menu-item'>
+                <div key={dataItem.id} data-test-id={`menu-item-${dataItem.category}`} className='menu-item'>
                   <h2>{dataItem.title}</h2>
                   <h3>{dataItem.category}</h3>
                   <img src={dataItem.img}></img>
