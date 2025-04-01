@@ -81,7 +81,7 @@ const Menu = () => {
 
   const [menu, setMenu] = useState(data)
 
-  function filteMenu(e){
+  function filtermenu(e){
     console.log(e.target.name)
     
     if (e.target.name === "all") {
@@ -94,12 +94,12 @@ const Menu = () => {
 
 
   return (
-    <div>
-        <div className='categories'>
-            <button onClick={filteMenu} name='all'>All</button>
-            <button onClick={filteMenu} name='breakfast'>Breakfast</button>
-            <button onClick={filteMenu} name='lunch'>Lunch</button>
-            <button onClick={filteMenu} name='shakes'>Shakes</button>
+    <div id='main'>
+        <div  className='categories'>
+            <button  onClick={filtermenu} name='all'>All</button>
+            <button id='filter-btn-1' onClick={filtermenu} name='breakfast'>Breakfast</button>
+            <button id='filter-btn-2' onClick={filtermenu} name='lunch'>Lunch</button>
+            <button id='filter-btn-3' onClick={filtermenu} name='shakes'>Shakes</button>
         </div>
         <div className="dishes-container">
         <div className='dishes'>
